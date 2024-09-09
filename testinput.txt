@@ -1,0 +1,4 @@
+this is test input
+this is on line 2
+the next line is the last
+the end
