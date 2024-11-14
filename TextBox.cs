@@ -9,10 +9,6 @@ namespace rayvn
 {
     internal class TextBox : Drawable
     {
-        public int x = 0;
-        public int y = 0;
-        public int width = 0;
-        public int height = 0;
         public string text = "";
         public Rectangle rec;
         public Color color;
@@ -30,7 +26,8 @@ namespace rayvn
         }
         public void draw()
         {
-            Raylib.DrawRectangleRounded(rec, 0.5f, 1, this.color);
+            Raylib.DrawRectangleRounded(rec, 0.20f, 1, this.color);
+            Raylib.DrawText(this.text, (int) this.rec.X, (int) this.rec.Y, 10, Color.Black);
         }
     }
 }
