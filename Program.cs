@@ -1,4 +1,5 @@
 ﻿using Raylib_cs;
+using rayvn;
 using System.IO;
 
 class Program
@@ -9,6 +10,7 @@ class Program
         Raylib.InitWindow(800, 480, "Hello World");
         StreamReader reader = new StreamReader("./testinput.txt");
         string? text = "init text";
+        TextBox dialogue_box = new TextBox(0, 0, 100, 100, Color.Magenta, "wowsers");
 
         while (!Raylib.WindowShouldClose())
         {
@@ -33,6 +35,7 @@ class Program
             }
 
             Raylib.DrawText(text, 12, 12, 20, Color.Black);
+            dialogue_box.draw();
 
             Raylib.EndDrawing();
         }
